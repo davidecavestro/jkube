@@ -111,6 +111,10 @@
                 <config>
                   <spring-boot>
                     <color>always</color>
+                    <from>registry.access.redhat.com/ubi8/openjdk-17-runtime</from> <!-- control base for generated image name -->
+                    <name>my/image:0.0.1</name>                                     <!-- control generated image name -->
+                    <targetDir>/path/to/my/app</targetDir>                          <!-- control app folder within generated image -->
+                    <labels>foo=abc,bar=123</labels>                                <!-- how can I do this? -->
                   </spring-boot>
                 </config>
               </generator>
